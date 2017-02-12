@@ -1,11 +1,11 @@
 #include <iostream>
-//#include <GLFW/glfw3.h>
-
+#include "src/maths/maths.h"
 #include "src/graphics/window.h"
 
 int main() {
 	using namespace sparky;
 	using namespace graphics;
+	using namespace maths;
 	Window window("Sparky!", 960, 540);
 	glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
 
@@ -15,18 +15,14 @@ int main() {
 	glGenVertexArrays(1, &vao);
 	glBindVertexArray(vao);
 
+	vec3 a(1.0f, 2.0f, 5.0f);
+	vec3 b(2, 4, 6);
+
+	vec3 c = a + b;
 
 	while (!window.closed()) {
 		window.clear();
-		double x, y;
-		window.getMousePosition(x, y);
-		std::cout << x << ", " << y << std::endl;
-		if (window.isKeyPressed(GLFW_KEY_A)) {
-			std::cout << "Key Pressed!" << std::endl;
-		}
-		if (window.isMouseButtonPressed(GLFW_MOUSE_BUTTON_RIGHT)) {
-			std::cout << "Mouse Pressed!" << std::endl;
-		}
+		std::cout << a << std::endl;
 #if 1
 		glBegin(GL_QUADS);
 		glVertex2f(-0.5f, -0.5f);
