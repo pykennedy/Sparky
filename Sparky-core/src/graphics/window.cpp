@@ -80,8 +80,12 @@ void Window::clear() const {
 }
 
 void Window::update() {
+	GLenum error = glGetError();
+	if (error != GL_NO_ERROR) {
+		std::cout << "OpenGL Error: " << error << std::endl;
+	}
+
 	glfwPollEvents();
-	//glfwGetFramebufferSize(m_Window, &m_Width, &m_Height);
 	glfwSwapBuffers(m_Window);
 }
 
