@@ -92,6 +92,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
     </ClCompile>
     <Link>
       <AdditionalDependencies>glfw3.lib;opengl32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
