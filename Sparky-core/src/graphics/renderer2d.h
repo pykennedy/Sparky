@@ -1,10 +1,13 @@
 #pragma once
 
-#include "renderable2D.h"
+#include <vector>
+#include <GL/glew.h>
+#include "../maths/maths.h"
 
 namespace sparky {
 namespace graphics {
 
+class Renderable2D;
 class Renderer2D {
 protected:
 	std::vector<maths::mat4> m_TransformationStack;
